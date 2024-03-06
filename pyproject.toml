@@ -1,29 +1,18 @@
-[project]
+[tool.poetry]
 name = "fluke-api"
 version = "0.5.0"
-authors = [
-  {email = "manosstoumpos@gmail.com"},
-  {name = "Manos Stoumpos"}
-]
+authors = ["Manos Stoumpos <manosstoumpos@gmail.com>"]
 description = "Cloud-agnostic Python API"
-keywords = ["cloud", "storage", "message-queues", "aws", "azure", "gcp"]
-readme = "README.md"
-license = {text = "MIT"}
-requires-python = ">=3.9"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
-]
-dependencies = [
-  "azure-identity == 1.13.0",
-  "azure-storage-blob == 12.17.0",
-  "azure-storage-queue == 12.6.0",
-  "boto3 == 1.28.0",
-  "google-cloud-storage == 2.10.0",
-  "paramiko == 3.2.0",
-  "tqdm == 4.65.0"
-]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+azure-identity = "^1.15.0"
+azure-storage-blob = "^12.19.0"
+azure-storage-queue = "^12.9.0"
+boto3 = "^1.34.56"
+google-cloud-storage = "^2.15.0"
+paramiko = "^3.4.0"
+tqdm = "^4.66.2"
 
 [project.optional-dependencies]
 tests = [
