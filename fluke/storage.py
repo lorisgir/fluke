@@ -1992,12 +1992,12 @@ class _NonLocalDir(_Directory, _ABC):
         #       one can use the empty path in order to reference the
         #       bucket's/container's "top-level" virtual directory.
         if path != '':
-            if not handler.path_exists(path=path):
-                if create_if_missing:
-                    handler.mkdir(path=path)
-                else:
-                    self.close()
-                    raise _IPE(path)
+            # if not handler.path_exists(path=path):
+            #     if create_if_missing:
+            #         handler.mkdir(path=path)
+            #     else:
+            #         self.close()
+            #         raise _IPE(path)
             if handler.is_file(file_path=path):
                 self.close()
                 raise _IDE(path)

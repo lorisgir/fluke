@@ -1265,7 +1265,6 @@ class AzureClientHandler(ClientHandler):
         :param str path: An absolute path.
         '''
         with self.__container.get_blob_client(
-            container=self.__container_name,
             blob=path.rstrip(_infer_sep(path))
         ) as blob:
             return blob.exists()
